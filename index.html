@@ -19,10 +19,21 @@
             return response.json();
         })
         .then(function(data){
-           // dispalyOutput(data);
-           console.log(data);
+            dispalyOutput(data);
+          // console.log(data);
         })
-       }
+        }
+
+        function dispalyOutput(data){
+            output = "<table>";
+ 
+           for(a in data) {
+            output +=
+            <tr>
+                <td><img src="${rootPath}controller/uploads/${data[a].avatar}"/></td>
+                    </tr>
+           }
+        }
         
        
      </script>
